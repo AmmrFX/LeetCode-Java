@@ -2,7 +2,7 @@ class Solution {
     public int maxLengthBetweenEqualCharacters(String s) {
           char[] chars = s.toCharArray();
         HashMap<Character, Integer> dublicatedletters = new HashMap<>();
-        int max = -2;
+        int max = Integer.MIN_VALUE;
         int sum = 0;
         for (int i = 0; i < chars.length; i++) {
             if (!dublicatedletters.containsKey(chars[i])) {
