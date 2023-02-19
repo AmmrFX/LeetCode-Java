@@ -3,12 +3,13 @@ class Solution {
           char[] chars = s.toCharArray();
         HashMap<Character, Integer> dublicatedletters = new HashMap<>();
         int max = Integer.MIN_VALUE;
+        int sum = 0;
         for (int i = 0; i < chars.length; i++) {
             if (!dublicatedletters.containsKey(chars[i])) {
                 dublicatedletters.put(chars[i], i);
 
             } else {
-                int sum = i - dublicatedletters.get(chars[i])-1;
+                 sum = i - dublicatedletters.get(chars[i])-1;
                 if (max < sum) max = sum;
             }
         }
