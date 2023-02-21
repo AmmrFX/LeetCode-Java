@@ -36,11 +36,6 @@ class Solution {
             }
         }
         if(carryone==1)  sum.append(1);
-        StringBuilder finish = new StringBuilder();
-
-        for (int i = sum.length()-1; i >=0; i--) {
-            finish.append(sum.charAt(i));
-        }
-        return String.valueOf(finish);
+        return sum.reverse().toString();
     }
 }
