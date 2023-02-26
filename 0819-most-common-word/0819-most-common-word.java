@@ -10,14 +10,13 @@ class Solution {
             if (!map.containsKey(word)){
                 map.put(word,0);
             }
-            map.put(word,map.get(word)+1);
-            if (max<map.get(word)+1 &&!set.contains(word)) {
-                max= map.get(word)+1;
+  int count =  map.getOrDefault(word,0)+1;
+            map.put(word,count);
+            if (max<count &&!set.contains(word)) {
+                max= map.get(word);
                 maxWord= word;
             }
         }
-
-
         return maxWord;
     }
 }
