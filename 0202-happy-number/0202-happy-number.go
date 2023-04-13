@@ -1,6 +1,8 @@
 func isHappy(n int) bool {
+    	sum := 0
      	for i := 0; i < 10; i++ {
-		sum := 0
+                        sum=0
+
 		for n > 0 {
 			sum += (n % 10) * (n % 10)
 			n /= 10
